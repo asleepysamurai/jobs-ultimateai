@@ -9,5 +9,6 @@ module.exports = {
     '^src/(.*)$': '<rootDir>/src/$1',
     '^tests/(.*)$': '<rootDir>/tests/$1',
   },
+  moduleDirectories: ['node_modules', 'src'],
   testPathIgnorePatterns: ['dist'],
 };

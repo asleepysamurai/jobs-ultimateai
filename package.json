@@ -29,16 +29,16 @@
     "test:inspect-brk": "TZ='UTC' node --inspect-brk `which jest` --runInBand"
   },
   "devDependencies": {
-    "@types/bcrypt": "^3.0.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.0.1",
-    "@types/nodemailer": "^6.4.0",
+    "@types/request": "^2.48.8",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.20.2",
     "husky": "^4.2.5",
     "jest": "^26.6.3",
+    "nock": "^13.2.2",
     "prettier": "2.0.5",
     "prettier-eslint-cli": "^5.0.0",
     "pretty-quick": "^2.0.1",
@@ -55,19 +55,13 @@
     }
   },
   "engines": {
-    "node": ">=14.2.0 <15.0.0"
+    "node": ">=14.2.0 <16.0.0"
   },
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "csv-parser": "^3.0.0",
     "dotenv": "^8.2.0",
     "fastify": "^2.14.1",
-    "fastify-cors": "^3.0.3",
-    "fastify-formbody": "^3.2.0",
-    "fastify-jwt": "^1.4.0",
-    "fastify-plugin": "^1.6.1",
-    "knex": "^0.21.15",
-    "nodemailer": "^6.4.6",
-    "pg": "^8.2.0",
+    "request": "^2.88.2",
     "tsconfig-paths": "^3.9.0"
   }
 }
