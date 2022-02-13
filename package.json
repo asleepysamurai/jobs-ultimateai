@@ -1,9 +1,9 @@
 {
-  "name": "ts-f-api",
+  "name": "ultimate-api",
   "version": "0.0.1",
-  "description": "Scaffolding for a Typescript poject for a frontend API server",
+  "description": "Ultimate AI API server for backend challenge",
   "main": "dist/src/index.js",
-  "repository": "git@github.com:asleepysamurai/ts-scaffold-f-api.git",
+  "repository": "git@github.com:asleepysamurai/jobs-ultimateai.git",
   "author": "Balaganesh Damodaran <asleepysamurai@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
@@ -24,14 +24,13 @@
     "start:inspect": "yarn prep && yarn env:types:dev && yarn build:watch:run",
     "start:inspect-brk": "yarn prep && yarn env:types:dev && yarn build:watch:run-brk",
     "start:prod": "yarn prep && yarn env:types:prod && yarn build:prod",
-    "knex": "knex --knexfile ./knexfile.ts",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "test": "TZ='UTC' jest",
     "test:inspect-brk": "TZ='UTC' node --inspect-brk `which jest` --runInBand"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/node": "^14.0.1",
-    "@types/request": "^2.48.8",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
@@ -58,10 +57,11 @@
     "node": ">=14.2.0 <16.0.0"
   },
   "dependencies": {
-    "csv-parser": "^3.0.0",
     "dotenv": "^8.2.0",
     "fastify": "^2.14.1",
-    "request": "^2.88.2",
-    "tsconfig-paths": "^3.9.0"
+    "node-fetch-cjs": "^4.0.0-beta.4",
+    "sqlite3": "^5.0.2",
+    "tsconfig-paths": "^3.9.0",
+    "typeorm": "^0.2.41"
   }
 }

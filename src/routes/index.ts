@@ -1,1 +1,1 @@
-export * from './politics';
+export * from './chat';
