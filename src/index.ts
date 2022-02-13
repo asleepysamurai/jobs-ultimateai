@@ -31,7 +31,7 @@ const initRoutes = async (app: fastify.FastifyInstance) => {
   });
 };
 
-const init = async () => {
+export const init = async () => {
   const app = fastify({
     ignoreTrailingSlash: true,
     logger: true,
@@ -56,4 +56,6 @@ const init = async () => {
   return app;
 };
 
-init();
+if (require.main === module) {
+  init();
+}

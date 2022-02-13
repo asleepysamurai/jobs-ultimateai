@@ -12,8 +12,8 @@ const schema = {
     type: 'object',
     required: ['botId', 'message'],
     properties: {
-      botId: { type: 'string' },
-      message: { type: 'string' },
+      botId: { type: 'string', minLength: 1 },
+      message: { type: 'string', minLength: 1 },
     },
   },
   response: {
@@ -61,10 +61,13 @@ const handle = async (
       // return fallback reply
 
       // log if missing reply for intent so devs can insert it later on
-      app.log.warn('Missing reply for found intent', { intent });
+      if (intent) {
+        app.log.warn('Missing reply for found intent', { intent });
+      }
+
       return {
         success: true,
-        intentFound: false,
+        intentFound: !!intent,
         reply: fallbackReply,
       };
     }
